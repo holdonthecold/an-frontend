@@ -1,5 +1,6 @@
-import ChatUI from "../components/ChatUI";
-
-export default function Page() {
-  return <ChatUI />;
-}
+await fetch("/api/chat", {
+  method: "POST",
+  body: JSON.stringify({
+    messages: chatMessages
+  })
+});
