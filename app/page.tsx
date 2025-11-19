@@ -1,20 +1,8 @@
-"use client";  // 如果你用的是客户端代码，需要加上这个标记
-
-import { useEffect } from 'react';
-
 export default function Page() {
-  useEffect(() => {
-    const sendData = async () => {
-      await fetch("/api/chat", {
-        method: "POST",
-        body: JSON.stringify({
-          messages: chatMessages
-        })
-      });
-    };
-
-    sendData();
-  }, []);
-
-  return <div>Chat page</div>;
+  return (
+    <div style={{ padding: 20 }}>
+      <h1>你好，这里是安的前端页面</h1>
+      <p>请继续完成聊天界面或 API 逻辑。</p>
+    </div>
+  );
 }
