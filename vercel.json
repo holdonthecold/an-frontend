@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://你的后端域名/api/$1"
+    }
+  ]
+}
