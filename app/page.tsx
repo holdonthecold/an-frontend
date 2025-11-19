@@ -1,16 +1,24 @@
+"use client"; // 标记为客户端代码
+
+import { useEffect } from 'react';
+
 export default function Page() {
-  async function sendMessage() {
-    await fetch("/api/chat", {
-      method: "POST",
-      body: JSON.stringify({
-        messages: chatMessages
-      })
-    });
-  }
+  useEffect(() => {
+    const sendData = async () => {
+      await fetch("/api/chat", {
+        method: "POST",
+        body: JSON.stringify({
+          messages: chatMessages
+        })
+      });
+    };
+
+    sendData();
+  }, []);
 
   return (
     <div>
-      <button onClick={sendMessage}>发送</button>
+      <button onClick={() => sendData()}>发送</button>
     </div>
   );
 }
